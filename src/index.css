@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Add custom animations */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+/* Selection colors */
+::selection {
+  @apply bg-blue-400/30;
+}
+
+/* Mobile tap highlights */
+input, textarea, button, select, div {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .text-container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .timer-display {
+    font-size: 3rem;
+  }
+  
+  .restart-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
